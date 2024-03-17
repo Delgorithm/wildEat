@@ -1,3 +1,12 @@
+:root{
+    --clr-background: #FFF5F5;
+    --clr-main-pink: #F7146B;
+    --clr-second-pink: #EFE0F1;
+    --clr-white: #F1F1F1;
+    --clr-black: #010101;
+    --clr-gray: #8F8F8F;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -6,3 +15,70 @@
     text-decoration: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+body {
+    background-color: var(--clr-background);
+}
+
+/* --------------- Header ---------------  */
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    padding: 1rem;
+}
+
+header > section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+header > img {
+    grid-column-start: none;
+}
+
+
+/* --------------- Main -----------------------------  */
+
+
+/* --------------- Main - Section - 1 ---------------  */
+main > section > input {
+    width: 15.1rem;
+    height: 1.7rem;
+    border-radius: 0.6rem;
+    border: 0.1px solid var(--clr-main-pink);
+    padding-left: 1rem;
+    justify-self: center;
+}
+
+main > section > input:focus {
+    border: 2px solid var(--clr-main-pink);
+}
+
+main > section:nth-child(1) {
+    display: grid;
+}
+
+main > section:nth-child(1) > article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin: 1rem;
+    background-image: url(./Img/background-card.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+main > section:nth-child(1) > article > p {
+    align-self: center;
+    background-color: blue;
+    word-wrap: break-word;
+}
+
+/* --------------- Main - Section - 2 ---------------  */
+/* --------------- Main - Section - 3 ---------------  */
+/* --------------- Main - Section - 4 ---------------  */
+/* --------------- Main - Section - 5 ---------------  */
+/* --------------- Footer ---------------------------  */
