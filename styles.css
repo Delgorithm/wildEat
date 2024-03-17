@@ -37,14 +37,13 @@ header > img {
     grid-column-start: none;
 }
 
-
 /* --------------- Main -----------------------------  */
 
 
 /* --------------- Main - Section - 1 ---------------  */
 main > section > input {
-    width: 15.1rem;
-    height: 1.7rem;
+    width: 80%;
+    height: 2rem;
     border-radius: 0.6rem;
     border: 0.1px solid var(--clr-main-pink);
     padding-left: 1rem;
@@ -63,6 +62,7 @@ main > section:nth-child(1) > article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    padding: 0.4rem;
     margin: 1rem;
     background-image: url(./Img/background-card.svg);
     background-repeat: no-repeat;
@@ -72,13 +72,53 @@ main > section:nth-child(1) > article {
 }
 
 main > section:nth-child(1) > article > p {
+    color: var(--clr-white);
+    text-align: center;
     align-self: center;
-    background-color: blue;
-    word-wrap: break-word;
+    font-size: 2rem;
+}
+
+main > section:nth-child(1) > article > p > span {
+    display: block;
+    font-size: 1.2rem;
+}
+
+main > section:nth-child(1) > article > img {
+    justify-self: flex-end;
 }
 
 /* --------------- Main - Section - 2 ---------------  */
+main > section:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+main > section:nth-child(2) > span {
+    display: block;
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 100%;
+}
+
+main > section:nth-child(2) > span:nth-child(1) {
+    justify-self: flex-end;
+    background-color: #F7146B;
+}
+
+main > section:nth-child(2) > span:nth-child(2) {
+    background-color: var(--clr-black);
+}
+
+main > section:nth-child(2) > span:nth-child(3) {
+    justify-self: flex-start;
+    background-color: var(--clr-black);
+}
+
 /* --------------- Main - Section - 3 ---------------  */
+
+
 /* --------------- Main - Section - 4 ---------------  */
 /* --------------- Main - Section - 5 ---------------  */
 /* --------------- Footer ---------------------------  */
