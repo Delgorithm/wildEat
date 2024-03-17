@@ -117,6 +117,32 @@ main > section:nth-child(2) > span:nth-child(3) {
 }
 
 /* --------------- Main - Section - 3 ---------------  */
+main > section:nth-child(3) {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+main > section:nth-child(3) > article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.6rem;
+    background-color: var(--clr-second-pink);
+    margin: 0.6rem;
+    border-radius: 1rem;
+}
+
+main > section:nth-child(3) > article:nth-child(1) {
+    background-color: var(--clr-main-pink);
+    color: white;
+}
+
+main > section:nth-child(3) > article:last-of-type {
+    width: 5rem;
+}
 
 
 /* --------------- Main - Section - 4 ---------------  */
