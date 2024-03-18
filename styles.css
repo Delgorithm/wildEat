@@ -192,13 +192,13 @@ main > article > a {
     text-align: end;
 }
 
-.cards > p:nth-child(1) {
+.cards .nameFirm {
     font-size: 1.3rem;
     font-weight: 500;
     color: var(--clr-main-pink);
 }
 
-.cards > a {
+.cards .knowMore {
     width: fit-content;
     align-self: end;
     padding: 0.12rem 1rem;
