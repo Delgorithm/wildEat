@@ -1,4 +1,4 @@
-const arrayRestaurants = [
+export const data = [
     {
         nom: "My Beers",
         distance: "220m",

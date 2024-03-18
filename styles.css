@@ -110,12 +110,12 @@ main > section:nth-child(2) > span:nth-child(1) {
 }
 
 main > section:nth-child(2) > span:nth-child(2) {
-    background-color: var(--clr-black);
+    background-color: var(--clr-second-pink);
 }
 
 main > section:nth-child(2) > span:nth-child(3) {
     justify-self: flex-start;
-    background-color: var(--clr-black);
+    background-color: var(--clr-second-pink);
 }
 
 /* --------------- Main - Section - 3 ---------------  */
