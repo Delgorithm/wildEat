@@ -170,17 +170,13 @@ main > section:nth-child(4) > article:nth-child(1) > p {
     font-weight: 600;
 }
 
-main > section:nth-child(4) > article:nth-child(2) {
-    display: grid;
-    gap: 0.4rem;
-    position: relative;
+.cards {
     background-image: url(./Img/mobile-fast-food-burger-1.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     text-align: end;
     margin: 1rem 1rem 0rem 1rem;
-    padding: 3rem 2rem;
+    padding: 4rem 3rem;
     max-width: fit-content;
 }
 

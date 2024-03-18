@@ -70,7 +70,36 @@ searchInput.addEventListener("change", (e) => {
 });
 
 // -------------------------------------- FUNCTION CREATE CARD --------------------------------------
+let container = document.querySelector('.allCards');
 
+function createCard() {
+    const card = document.createElement('article');
+    card.classList.add('cards');
+    container.appendChild(card);
+
+    const cardRestaurant = document.createElement('p');
+    cardRestaurant.classList.add('nameFirm');
+    cardRestaurant.innerText = "East Street";
+    card.appendChild(cardRestaurant);
+
+    const cardDist = document.createElement('p');
+    cardDist.classList.add('distance');
+    cardDist.innerText = "(à 230m)";
+    card.appendChild(cardDist);
+
+    const cardDescription = document.createElement('p');
+    cardDescription.classList.add('desc');
+    cardDescription.innerText = "le vrai burger New - Yorkais, ses frites, ses cookies";
+    card.appendChild(cardDescription);
+
+    const cardMore = document.createElement('a');
+    cardMore.setAttribute('href', '');
+    cardMore.classList.add('knowMore');
+    cardMore.innerHTML = "En savoir plus";
+    card.appendChild(cardMore);
+}
+
+createCard();
 
 //  1. Filtrer les recherches sur les boutons ✅
 // 2. Filtrer les recherhes sur l'input ✅
