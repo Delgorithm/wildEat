@@ -1,6 +1,8 @@
 import { data } from "./data/data.js";
+import { dataFavourite } from "./data/dataFavourite.js";
 
 const arrayData = data;
+const favourites = dataFavourite;
 
 const allBtn = document.querySelectorAll(".filterRestaurant");
 
@@ -69,7 +71,7 @@ searchInput.addEventListener("change", (e) => {
 	});
 });
 
-// -------------------------------------- FUNCTION CREATE CARD --------------------------------------
+// -------------------------------------- FUNCTION CREATE CARD - FAST FOOD  --------------------------------------
 let container = document.querySelector('.allCards');
 
 function createCard() {
@@ -97,41 +99,100 @@ function createCard() {
 	cardMore.classList.add('knowMore');
 	cardMore.innerText = "En savoir plus";
 	card.appendChild(cardMore);
-
 };
 
-createCard();
+// -------------------------------------- FUNCTION CREATE CARD - BRUNCH  --------------------------------------
 
-// function createCard() {
-//     const card = document.createElement('article');
-//     card.classList.add('cards');
-//     container.appendChild(card);
+let containerBrunch = document.querySelector('.allBrunch');
 
-//     const cardRestaurant = document.createElement('p');
-//     cardRestaurant.classList.add('nameFirm');
-//     cardRestaurant.innerText = "East Street";
-//     card.appendChild(cardRestaurant);
+function createCardBrunch() {
+	const card = document.createElement('article');
+	card.classList.add('cards');
+	containerBrunch.appendChild(card);
 
-//     const cardDist = document.createElement('p');
-//     cardDist.classList.add('distance');
-//     cardDist.innerText = "(à 230m)";
-//     card.appendChild(cardDist);
+	const cardTitle = document.createElement('p');
+	cardTitle.innerText = "East Street";
+	cardTitle.classList.add('nameFirm');
+	card.appendChild(cardTitle);
 
-//     const cardDescription = document.createElement('p');
-//     cardDescription.classList.add('desc');
-//     cardDescription.innerText = "le vrai burger New - Yorkais, ses frites, ses cookies";
-//     card.appendChild(cardDescription);
+	const cardDistance = document.createElement('p');
+	cardDistance.innerText = "(à 268m)";
+	cardDistance.classList.add('distance');
+	card.appendChild(cardDistance);
 
-//     const cardMore = document.createElement('a');
-//     cardMore.setAttribute('href', '');
-//     cardMore.classList.add('knowMore');
-//     cardMore.innerHTML = "En savoir plus";
-//     card.appendChild(cardMore);
+	const cardDesc = document.createElement('p');
+	cardDesc.innerText = "le vrai burger New - Yorkais, ses frites, ses cookies";
+	cardDesc.classList.add('desc');
+	card.appendChild(cardDesc);
+
+	const cardMore = document.createElement('a');
+	cardMore.setAttribute('href', '');
+	cardMore.classList.add('knowMore');
+	cardMore.innerText = "En savoir plus";
+	card.appendChild(cardMore);
+}
+
+// -------------------------------------- FUNCTION CREATE CARD - BAR  --------------------------------------
+
+let containerBars = document.querySelector('.allBars');
+
+function createCardBars() {
+	const card = document.createElement('article');
+	card.classList.add('cards');
+	containerBars.appendChild(card);
+
+	const cardTitle = document.createElement('p');
+	cardTitle.innerText = "East Street";
+	cardTitle.classList.add('nameFirm');
+	card.appendChild(cardTitle);
+
+	const cardDistance = document.createElement('p');
+	cardDistance.innerText = "(à 268m)";
+	cardDistance.classList.add('distance');
+	card.appendChild(cardDistance);
+
+	const cardDesc = document.createElement('p');
+	cardDesc.innerText = "le vrai burger New - Yorkais, ses frites, ses cookies";
+	cardDesc.classList.add('desc');
+	card.appendChild(cardDesc);
+
+	const cardMore = document.createElement('a');
+	cardMore.setAttribute('href', '');
+	cardMore.classList.add('knowMore');
+	cardMore.innerText = "En savoir plus";
+	card.appendChild(cardMore);
+}
+
+// -------------------------------------- FUNCTION CREATE CARD REFACTORIZED --------------------------------------
+
+for (let i = 0; i < favourites.length; i++) {
+	const currentProduct = favourites[i];
+	createCard(currentProduct);
+	createCardBrunch(currentProduct);
+	createCardBars(currentProduct);
+};
+
+// function createAnElement(tag, classname = null, parent) {
+// 	const element = document.createElement(tag);
+// 	element.classList.add(classname);
+// 	parent.appendChild(element);
+// 	return element;
 // }
 
-// createCard();
+// function createCardFactorized(favourites) {
+// 	for (let i = 0; i < favourites.length; i++) {
+
+// 		const card = createAnElement('article', 'card', container);
+// 		const cardHeader = createAnElement('p', 'nameFirm', card);
+// 		const cardDistance = createAnElement('p', 'distance', card);
+// 		const cardDesc = createAnElement('p', 'desc', card);
+// 		const cardMore = createAnElement('a', 'knowMore', card);
+// 	}
+// }
 
 //  1. Filtrer les recherches sur les boutons ✅
 // 2. Filtrer les recherhes sur l'input ✅
-// 3. Créer des cartes/composants avec du JS ❌
+// 3. Créer des cartes/composants avec du JS ✅
+// 3. Créer des cartes/composants avec du JS en parcourant le tableau ⏳
+// 3. Créer des cartes/composants avec du JS en parcourant le tableau avec un code refactorisé ❌
 // 4. Créer les fonctionalités JS avec les icons ❌
